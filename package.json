@@ -1,6 +1,6 @@
 {
   "name": "gulp-jinx-compiler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GulpJS plugin for compile .jinx into .swf",
   "license": "MIT",
   "repository": "webcaetano/gulp-jinx-compiler",
