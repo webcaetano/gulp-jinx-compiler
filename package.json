@@ -1,0 +1,49 @@
+{
+  "name": "gulp-jinx-compiler",
+  "version": "1.0.0",
+  "description": "GulpJS plugin for compile .jinx into .swf",
+  "license": "MIT",
+  "repository": "webcaetano/gulp-jinx-compiler",
+  "author": {
+    "name": "",
+    "email": "dezaodoido@gmail.com",
+    "url": "https://github.com/webcaetano"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "swf",
+    "flash",
+    "jinx",
+    "actionscript",
+    "as3",
+    "compiler",
+    "builder",
+    "build",
+    "as"
+  ],
+  "dependencies": {
+    "beepbeep": "^1.2.0",
+    "gulp-util": "^3.0.1",
+    "jinx-compiler": "^1.2.1",
+    "lodash": "^3.8.0",
+    "mkdirp": "^0.5.0",
+    "swf-build": "^1.0.4",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "glob": "^5.0.5",
+    "gulp": "^3.8.11",
+    "jinx-mempanel": "^1.0.3",
+    "mocha": "*"
+  }
+}

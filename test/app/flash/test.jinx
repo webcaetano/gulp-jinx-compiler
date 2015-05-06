@@ -1,0 +1,3 @@
+require('jinx-mempanel')();
+
+include 'partials/bar.as';
