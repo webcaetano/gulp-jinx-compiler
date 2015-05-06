@@ -1,45 +1,32 @@
-[![Build Status](https://travis-ci.org/webcaetano/gulp-flash.svg?branch=master)](https://travis-ci.org/webcaetano/gulp-flash) [![npm version](https://badge.fury.io/js/gulp-flash.svg)](http://badge.fury.io/js/gulp-flash)
+[![Build Status](https://travis-ci.org/webcaetano/gulp-jinx-compiler.svg?branch=master)](https://travis-ci.org/webcaetano/gulp-jinx-compiler) [![npm version](https://badge.fury.io/js/gulp-jinx-compiler.svg)](http://badge.fury.io/js/gulp-jinx-compiler)
 
 # Gulp Flash
 
 ### Installation
 
 ```
-npm install gulp-flash
+npm install gulp-jinx-compiler
 ```
 
 ### Documentation
 
 
-Single file
+Without parameters
 
 ```javascript
-var flash = require('gulp-flash');
+var jinxCompiler = require('gulp-jinx-compiler');
 
-gulp.src('src/main.as')
-.pipe(flash()) // will out pull main.swf in same folder
-```
-
-Multi file
-
-```javascript
-gulp.src('src/*.as')
-.pipe(flash()) // will out pull all .swf in same folder
-```
-
-
-Multi file with swf output
-
-```javascript
-gulp.src('src/*.as')
-.pipe(flash('swf/')) // will out pull all .swf in target folder
+gulp.src('test/app/flash/test.jinx')
+.pipe(jinxCompiler('test/app/flash/dist'))
+// will compile jinx into swf
 ```
 
 With parameters
 
 ```javascript
-gulp.src('src/*.as')
-.pipe(flash('swf/',{
+gulp.src('test/app/flash/test.jinx')
+.pipe(jinxCompiler('test/app/flash/dist',{
+	'debug':true,
 	'library-path': [
 		'./libs'
 	],
@@ -48,23 +35,8 @@ gulp.src('src/*.as')
 	],
 	'swf-version': 13,
 	'use-gpu': true
-}))) // will out pull all .swf in target folder using this parameters
-
-// or 
-
-gulp.src('src/*.as')
-.pipe(flash({
-	'library-path': [
-		'./libs'
-	],
-	'source-path': [
-		'./zClass'
-	],
-	'swf-version': 13,
-	'use-gpu': true
-}))) // will out pull all .swf in same folder using this parameters
+})); // will compile jinx into swf
 ```
-
 
 ---------------------------------
 
