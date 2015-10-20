@@ -22,7 +22,7 @@ public function test() {
 ([function(module, exports, __jinx_require__) {
 __jinx_require__(1)();
 
-// include "../../../../../test/app/flash/partials/bar.as";
+
 include "../../../../../test/app/flash/partials/bar.as";
 
 __jinx_require__(2)
@@ -30,10 +30,6 @@ __jinx_require__(3)
 
 },
 function(module, exports, __jinx_require__) {
-/**
-Author : Andre Caetano 2015
-Jinx Plugin
-**/
 import flash.system.*;
 import flash.text.*;
 import flash.display.*;
