@@ -1,3 +1,7 @@
 require('jinx-mempanel')();
 
+// include 'partials/bar.as';
 include 'partials/bar.as';
+
+require('./partials/bola.as')
+require('./partials/foo.jinx')

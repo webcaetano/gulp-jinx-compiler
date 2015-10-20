@@ -22,7 +22,11 @@ public function test() {
 ([function(module, exports, __jinx_require__) {
 __jinx_require__(1)();
 
+// include "../../../../../test/app/flash/partials/bar.as";
 include "../../../../../test/app/flash/partials/bar.as";
+
+__jinx_require__(2)
+__jinx_require__(3)
 
 },
 function(module, exports, __jinx_require__) {
@@ -102,6 +106,20 @@ module.exports = function(){
 		rows[1].text="Memory: "+(Math.floor((System.totalMemory/1024)/10)/100);
 		rows[2].text="Particles: "+childrenCount;
 	});
+}
+
+},
+function(module, exports, __jinx_require__) {
+__jinx_require__(3);
+
+module.exports = function(){
+	return 3;
+}
+
+},
+function(module, exports, __jinx_require__) {
+module.exports = function(){
+	return 'jinx';
 }
 
 }]);
